@@ -16,6 +16,12 @@ If I have time, I will also try to explain each solution in a README file found 
 
 Input files are opened using `open('input.txt')` (or whatever the input file format happens to be), so the current working directory matters when running the code.
 
+These solutions frequently contain list comprehensions. If you're not familiar with them, some good resources to check out are:
+- [Official Python documentation](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/python-list-comprehension/)
+- [RealPython](https://realpython.com/list-comprehension-python/)
+- [W3Schools](https://www.w3schools.com/python/python_lists_comprehension.asp)
+
 ## Completed Solutions
 
 - [x] [Day 1](day-1)
