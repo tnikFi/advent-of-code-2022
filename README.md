@@ -4,6 +4,17 @@
 
 If I have time, I will also try to explain each solution in a README file found in each day's folder. I probably won't end up doing this for every solution.
 
+<br>
+
+## Rules
+
+- To state the obvious, copying someone else's solution is not allowed.
+- Importing libraries is strongly discouraged, and if used, the import must be on the same line as the solution.
+  - Imports are limited to the standard library.
+- Solutions don't need to be human-readable.
+
+<br>
+
 ## Notes
 
 Input files are opened using `open('input.txt')` (or whatever the input file format happens to be), so the current working directory matters when running the code.
