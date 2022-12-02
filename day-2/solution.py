@@ -3,28 +3,3 @@ print(sum([(lambda playerChoice: 1 if playerChoice == "X" else (2 if playerChoic
 
 # Part 2
 print(sum([(lambda choices: {"A": 3, "B": 1, "C": 2}[choices[0]] if choices[1] == "X" else (ord(choices[0]) - 64 if choices[1] == "Y" else {"A": 2, "B": 3, "C": 1}[choices[0]]))(game.split(" "))+{"X": 0,"Y": 3,"Z": 6}[game.split(" ")[1]] for game in open("input.txt").read().split("\n")]))
-
-print(
-    sum(
-        [
-            (
-                lambda choices: 
-                {"A": 3, "B": 1, "C": 2}[choices[0]] if choices[1] == "X"
-                else (
-                    ord(choices[0]) - 64 if choices[1] == "Y"
-                    else {"A": 2, "B": 3, "C": 1}[choices[0]]
-                )
-            )(game.split(" "))
-            +
-            {
-                "X": 0,
-                "Y": 3,
-                "Z": 6
-            }[game.split(" ")[1]]
-            for game
-            in open("input.txt")
-                .read()
-                .split("\n")
-        ]
-    )
-)
