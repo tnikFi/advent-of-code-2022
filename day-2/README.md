@@ -78,7 +78,7 @@ Let's break this down a bit.
 # Part 2
 
 ```py
-print(sum([(lambda choices: (lambda opponentChoice: 1 if opponentChoice == "B" else (2 if opponentChoice == "C" else 3))(choices[0]) if choices[1] == "X" else (ord(choices[0]) - 64 if choices[1] == "Y" else (lambda opponentChoice: 1 if opponentChoice == "C" else (2 if opponentChoice == "A" else 3))(choices[0])))(game.split(" "))+{"X": 0, "Y": 3, "Z": 6}[game.split(" ")[1]] for game in open("input.txt").read().split("\n")]))
+print(sum([(lambda choices: {"A": 3, "B": 1, "C": 2}[choices[0]] if choices[1] == "X" else (ord(choices[0]) - 64 if choices[1] == "Y" else {"A": 2, "B": 3, "C": 1}[choices[0]]))(game.split(" "))+{"X": 0,"Y": 3,"Z": 6}[game.split(" ")[1]] for game in open("input.txt").read().split("\n")]))
 ```
 
 The rules for part 2 are mostly the same as part 1, but there is a small difference: now X means the player should play whatever choice will result in their loss, Y means the player should tie with the opponent and Z means the player should win.
