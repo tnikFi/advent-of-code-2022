@@ -1,0 +1,2 @@
+# Part 1
+print(sum([(lambda playerChoice: 1 if playerChoice == "X" else (2 if playerChoice == "Y" else 3))(game.split(" ")[1])+(lambda choices: 0 if ((choices[0] == "A" and choices[1] == "Z") or (choices[0] == "B" and choices[1] == "X") or (choices[0] == "C" and choices[1] == "Y")) else (3 if ord(choices[1]) == ord(choices[0]) + 23 else 6))(game.split(" "))for game in open('input.txt').read().split('\n')]))
